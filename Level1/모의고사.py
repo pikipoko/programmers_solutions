@@ -47,3 +47,26 @@ def solution(answers):
             an.append(i+1)
 
     return an
+"""  수정본
+    def solution(answers):
+    answer = [0,0,0]
+    result = []
+    
+    a1 = [1,2,3,4,5]
+    a2 = [2,1,2,3,2,4,2,5]
+    a3 = [3,3,1,1,2,2,4,4,5,5]
+    
+    for i,a in enumerate(answers):
+        if a == a1[i%5]:
+            answer[0] += 1
+        if a == a2[i%8]:
+            answer[1] += 1
+        if a == a3[i%10]:
+            answer[2] += 1
+    m = max(answer[0],answer[1],answer[2])
+    for i,a in enumerate(answer):
+        if m == a:
+            result.append(i+1)
+        
+    return result
+"""
